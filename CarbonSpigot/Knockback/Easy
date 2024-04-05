@@ -1,0 +1,40 @@
+---
+sidebar_position: 0
+---
+
+This knockback type is entirely based off vanilla Minecraft knockback with some additional variables. 
+
+Each variable has a different effect on the knockback and that can be determined literally and by feel. 
+
+## Horizontal
+This is simply the backwards knockback that you take.
+
+## Vertical
+This is simply the upwards knockback that you take.
+
+## Extra Horizontal
+This is the additional horizontal knockback that you deal while sprinting. It adds on to the regualar horizontal knockback that you take.
+
+## Extra Vertical
+This is the additional vertical knockback that you deal while sprinting. It adds on to the regualar vertical knockback that you take.
+
+## Friction
+This is how much of your knockback is influenced by your movement. The value that you set is the divisor of which its dividend is one. To put that into perspective, the friction value being `x`, the total friction value would be 1/`x`. 
+
+For example, if `friction: 2.0`, that means half of the knockback is influenced by your's movement.
+
+:::danger
+Do not set the friction value to 0. This can crash your server due to a math error since it is basically calculating 1/0.
+:::
+
+## Vertical Limit
+This is the limit at which you stop taking additional vertical knockback. This, however, works different in easy type knockback. If you exceed the limit, you will fall down slowly without gaining any vertical knockback.  
+
+:::tip Did you know?
+Setting the vertical limit value as your desired vertical value in this knockback type specifically can make your vertical knockback much smoother.
+
+For example, setting `verticalLimit: 0.36` and `vertical: 1.0` will make it so you always hit the vertical limit. This does not mean that you will fall like a stone upon exceeding the vertical limit. 
+:::
+
+
+
